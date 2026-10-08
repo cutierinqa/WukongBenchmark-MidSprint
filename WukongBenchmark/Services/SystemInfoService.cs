@@ -31,13 +31,11 @@ public class SystemInfoService
             if (string.IsNullOrWhiteSpace(name))
                 continue;
 
-            // моя дискретная NVIDIA
             if (name.Contains("NVIDIA", StringComparison.OrdinalIgnoreCase))
             {
                 return name;
             }
 
-            // если нет, юзаю встроенную видеокарту
             if (name.Contains("Intel", StringComparison.OrdinalIgnoreCase) ||
                 name.Contains("AMD", StringComparison.OrdinalIgnoreCase))
             {
